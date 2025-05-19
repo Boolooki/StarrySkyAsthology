@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <ImageFade
         imageSrc="/FadingGirl.jpg"
-        altText="Fading Girl with a Black Background something"
+        altText="Fading Girl with a Black Background"
       />
     </div>
   );
