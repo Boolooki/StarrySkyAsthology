@@ -1,12 +1,10 @@
-import ImageFade from "./components/ImageFade";
+import StarryBanner from "./components/StarryBanner";
+
 
 export default function Home() {
   return (
     <div>
-      <ImageFade
-        imageSrc="/FadingGirl.jpg"
-        altText="Fading Girl with a Black Background nice try Diddy"
-      />
+      <StarryBanner />
     </div>
   );
 }
