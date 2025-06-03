@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#2A2A60] px-8 h-16 flex items-center justify-between relative">
+    <nav className="bg-[#2A2A60] px-8 h-16 flex items-center justify-between sticky top-0 z-50">
       <div className="text-[#FFD700] text-xl tracking-wide">
         StarrySkyAsthology
       </div>
