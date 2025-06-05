@@ -53,15 +53,32 @@ export default function ServicesBanner() {
           </div>
         </div>
       </div>
-      <div className="bg-[E6E6FA]">
-        <p>“ Over 10 years of experience in astrology ”</p>
-        <Image
-          src="/hand.png"
-          alt="Hand with stars"
-          width={1440}
-          height={0}
-          className="mx-auto mt-4"
-        />
+      <div className="bg-[#E6E6FA] flex flex-col">
+        <p className="text-[#1A1A40] w-[30vw] text-center text-base font-bold pt-[10vw] ml-[7vw]
+        sm:text-xl
+        md:text-2xl
+        lg:text-4xl
+        xl:text-5xl
+        ">
+          “ Over 10 years of experience in astrology ”
+        </p>
+        <button className="bg-[#ffd700] text-[#1A1A40] text-xs px-2 py-1 rounded-full mt-[3vw] w-[40vw] ml-[3vw]
+        sm:text-xs
+        md:text-base
+        lg:text-xl
+        xl:text-3xl
+        ">
+          Tailored reading just for you
+        </button>
+        <div className="relative z-3 items-center justify-center">
+          <Image
+            src="/hand.png"
+            alt="Hand with stars"
+            width={1440}
+            height={0}
+            className="-mt-[45vw]"
+          />
+        </div>
       </div>
     </div>
   );
