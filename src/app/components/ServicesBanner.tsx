@@ -12,20 +12,26 @@ export default function ServicesBanner() {
           Explore Our Personalized Astrology Offerings
         </h2>
         <div className="flex items-center justify-center">
-          <div className="z-0 transition-all duration-300
+          <div
+            className="z-0 transition-all duration-300
             md:mt-20 md:rotate-[-20deg]
             lg:mt-30 lg:rotate-[-30deg]
-            xl:mt-40 xl:rotate-[-40deg]">
+            xl:mt-40 xl:rotate-[-40deg]
+            "
+          >
             <TarotCard
               imageSrc="/servicetarotmark1.png"
               nameCard="Daily Horoscope Readings"
               describeCard="Short, engaging predictions for love, career, health, and personal growth Users can select their zodiac sign to view personalized readings."
             />
           </div>
-          <div className="z-1 -ml-[370px] transition-all duration-300
+          <div
+            className="z-1 -ml-[370px] transition-all duration-300
             md:-ml-[300px]
             lg:-ml-[170px]
-            xl:-ml-[80px]">
+            xl:-ml-[80px]
+            "
+          >
             <TarotCard
               imageSrc="/servicetarotmark2.png"
               nameCard="Natal Birth Chart Analysis"
@@ -36,7 +42,8 @@ export default function ServicesBanner() {
             className="z-2 -ml-[370px] transition-all duration-300
             md:-ml-[300px] md:mt-20 md:rotate-[20deg]
             lg:-ml-[170px] lg:mt-30 lg:rotate-[30deg]
-            xl:-ml-[80px] xl:mt-40 xl:rotate-[40deg]"
+            xl:-ml-[80px] xl:mt-40 xl:rotate-[40deg]
+            "
           >
             <TarotCard
               imageSrc="/servicetarotmark3.png"
