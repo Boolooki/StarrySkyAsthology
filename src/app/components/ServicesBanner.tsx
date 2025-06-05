@@ -13,7 +13,7 @@ export default function ServicesBanner() {
         </h2>
         <div className="flex items-center justify-center">
           <div
-            className="z-0 transition-all duration-300
+            className="z-1 transition-all duration-300
             md:mt-20 md:rotate-[-20deg]
             lg:mt-30 lg:rotate-[-30deg]
             xl:mt-40 xl:rotate-[-40deg]
@@ -26,10 +26,11 @@ export default function ServicesBanner() {
             />
           </div>
           <div
-            className="z-1 -ml-[370px] transition-all duration-300
+            className="z-2 -ml-[370px] transition-all duration-300
             md:-ml-[300px]
             lg:-ml-[170px]
             xl:-ml-[80px]
+            2xl:-ml-[0px]
             "
           >
             <TarotCard
@@ -39,10 +40,11 @@ export default function ServicesBanner() {
             />
           </div>
           <div
-            className="z-2 -ml-[370px] transition-all duration-300
+            className="z-3 -ml-[370px] transition-all duration-300
             md:-ml-[300px] md:mt-20 md:rotate-[20deg]
             lg:-ml-[170px] lg:mt-30 lg:rotate-[30deg]
             xl:-ml-[80px] xl:mt-40 xl:rotate-[40deg]
+            2xl:-ml-[0px]
             "
           >
             <TarotCard
@@ -74,9 +76,12 @@ export default function ServicesBanner() {
           <Image
             src="/hand.png"
             alt="Hand with stars"
-            width={1440}
+            width={2880}
             height={0}
-            className="-mt-[45vw]"
+            priority
+            className="w-full h-auto object-cover -mt-[45vw]
+            2xl:-mt-[38vw]
+            "
           />
         </div>
       </div>
