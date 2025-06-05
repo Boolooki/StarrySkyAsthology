@@ -61,17 +61,20 @@ export default function ServicesBanner() {
         md:text-2xl
         lg:text-4xl
         xl:text-5xl
+        2xl:pt-[15vw]
         ">
           “ Over 10 years of experience in astrology ”
         </p>
-        <button className="bg-[#ffd700] text-[#1A1A40] text-xs px-2 py-1 rounded-full mt-[3vw] w-[40vw] ml-[3vw]
+        <a href="#book-a-reading" 
+        className="bg-[#ffd700] text-[#1A1A40] text-xs px-2 py-1 rounded-full mt-[3vw] w-[40vw] ml-[3vw] text-center
         sm:text-xs
         md:text-base
         lg:text-xl
         xl:text-3xl
+        hover:bg-yellow-400 transition-colors duration-200
         ">
           Tailored reading just for you
-        </button>
+        </a>
         <div className="relative z-3 items-center justify-center">
           <Image
             src="/hand.png"
@@ -79,8 +82,8 @@ export default function ServicesBanner() {
             width={2880}
             height={0}
             priority
-            className="w-full h-auto object-cover -mt-[45vw]
-            2xl:-mt-[38vw]
+            className="w-full h-auto object-cover -mt-[45vw] pointer-events-none
+            xl:-mt-[41vw]
             "
           />
         </div>
