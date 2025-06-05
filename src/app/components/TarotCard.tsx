@@ -14,16 +14,9 @@ const TarotCard: React.FC<TarotCardProps> = ({
 }) => {
   return (
     <div className="flex justify-center items-center bg-[url('/tarotframe.png')] bg-cover bg-center w-[370px] h-[560px] flex-col gap-12">
-      <Image
-        src={imageSrc}
-        alt={nameCard}
-        width={220}
-        height={0}
-      />
-      <p className="text-2xl sm:text-xl text-center">{nameCard}</p>
-      <p className="w-[80%] text-text-base sm:text-sm text-center">
-        {describeCard}
-      </p>
+      <Image src={imageSrc} alt={nameCard} width={220} height={0} />
+      <p className="text-center text-2xl ">{nameCard}</p>
+      <p className="w-[80%] text-center text-base">{describeCard}</p>
     </div>
   );
 };
