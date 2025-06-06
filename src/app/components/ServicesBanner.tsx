@@ -1,9 +1,49 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import TarotCard from "./TarotCard";
 import Image from "next/image";
-
+//Understanding the tarotCardSrc array//
+const tarotCardSrc = [
+  {
+    imageSrc: "/servicetarotmark1.png",
+    nameCard: "Daily Horoscope Readings",
+    describeCard:
+      "Short, engaging predictions for love, career, health, and personal growth Users can select their zodiac sign to view personalized readings.",
+    className: `z-1 transition-all duration-300 md:mt-20 md:rotate-[-20deg] lg:mt-30 lg:rotate-[-30deg] xl:mt-40 xl:rotate-[-40deg]`,
+  },
+  {
+    imageSrc: "/servicetarotmark2.png",
+    nameCard: "Natal Birth Chart Analysis",
+    describeCard:
+      "Explain the significance of the Sun, Moon, and Rising signs, along with planetary placements Interactive birth chart generator where users input their details.",
+    className: `z-2 -ml-[370px] transition-all duration-300 md:-ml-[300px] lg:-ml-[170px] xl:-ml-[80px] 2xl:-ml-[0px]`,
+  },
+  {
+    imageSrc: "/servicetarotmark3.png",
+    nameCard: "Couples Compatibility Report",
+    describeCard:
+      "Insights into emotional, intellectual, and physical compatibility. Users enter their birth details to receive a compatibility score and analysis.",
+    className: `z-3 -ml-[370px] transition-all duration-300 md:-ml-[300px] md:mt-20 md:rotate-[20deg] lg:-ml-[170px] lg:mt-30 lg:rotate-[30deg] xl:-ml-[80px] xl:mt-40 xl:rotate-[40deg] 2xl:-ml-[0px]`,
+  },
+];
+//Digest section//
 export default function ServicesBanner() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const newIndex = Math.min(tarotCardSrc.length - 1, Math.floor(scrollPosition / 2000));
+      setCurrentIndex(newIndex);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [currentIndex]);
+
   return (
-    <div>
+    <div className="snap-center snap-always">
       <div className="flex flex-col items-center justify-center bg-[url('/servicebg.png')] bg-cover bg-center text-white text-center p-8">
         <h1 className="transition-all duration-300 text-[#ffd700] font-bold text-4xl md:text-5xl mt-10 mb-1">
           Our Services
@@ -12,47 +52,20 @@ export default function ServicesBanner() {
           Explore Our Personalized Astrology Offerings
         </h2>
         <div className="flex items-center justify-center">
-          <div
-            className="z-1 transition-all duration-300
-            md:mt-20 md:rotate-[-20deg]
-            lg:mt-30 lg:rotate-[-30deg]
-            xl:mt-40 xl:rotate-[-40deg]
-            "
-          >
-            <TarotCard
-              imageSrc="/servicetarotmark1.png"
-              nameCard="Daily Horoscope Readings"
-              describeCard="Short, engaging predictions for love, career, health, and personal growth Users can select their zodiac sign to view personalized readings."
-            />
-          </div>
-          <div
-            className="z-2 -ml-[370px] transition-all duration-300
-            md:-ml-[300px]
-            lg:-ml-[170px]
-            xl:-ml-[80px]
-            2xl:-ml-[0px]
-            "
-          >
-            <TarotCard
-              imageSrc="/servicetarotmark2.png"
-              nameCard="Natal Birth Chart Analysis"
-              describeCard="Explain the significance of the Sun, Moon, and Rising signs, along with planetary placements Interactive birth chart generator where users input their details."
-            />
-          </div>
-          <div
-            className="z-3 -ml-[370px] transition-all duration-300
-            md:-ml-[300px] md:mt-20 md:rotate-[20deg]
-            lg:-ml-[170px] lg:mt-30 lg:rotate-[30deg]
-            xl:-ml-[80px] xl:mt-40 xl:rotate-[40deg]
-            2xl:-ml-[0px]
-            "
-          >
-            <TarotCard
-              imageSrc="/servicetarotmark3.png"
-              nameCard="Couples Compatibility Report"
-              describeCard="Insights into emotional, intellectual, and physical compatibility. Users enter their birth details to receive a compatibility score and analysis."
-            />
-          </div>
+          {tarotCardSrc.map((card, index) => (
+            <div
+              key={index}
+              className={`${card.className} ${
+                currentIndex === index ? "opacity-100" : "opacity-0"
+              } transition-opacity duration-300 object-cover snap-center snap-always`}
+            >
+              <TarotCard
+                imageSrc={card.imageSrc}
+                nameCard={card.nameCard}
+                describeCard={card.describeCard}
+              />
+            </div>
+          ))}
         </div>
       </div>
       <div className="bg-[#E6E6FA] flex flex-col">

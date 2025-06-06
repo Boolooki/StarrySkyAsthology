@@ -1,12 +1,23 @@
 export default function StarryBanner() {
   return (
-    <div
-      className="h-[calc(100vh-4rem)] flex flex-col items-center justify-center bg-[url('/starrysky.jpg')] bg-cover bg-center text-white text-center"
-    >
-      <h1 className="text-[#ffd700] font-bold text-4xl md:text-5xl mb-1">Starry Skies Astrology</h1>
-      <h2 className="text-[#ffd700] font-normal text-1xl md:text-2xl mb-2.5">Discover Your Cosmic Destiny</h2>
-      <p className="absolute text-[#ffd700] mt-[80vh] font-[roboto] text-xs mb-5">
-        Unlock the secrets of the stars with personalized astrology readings, birth charts, and compatibility reports.
+    <div className="flex flex-col justify-between snap-start snap-always h-screen bg-[url('/starrysky.jpg')] bg-cover bg-center text-center text-[#ffd700] ">
+      <div className="flex flex-1 flex-col items-center justify-center">
+        <h1
+          className="font-bold text-4xl mb-5
+      md:text-5xl"
+        >
+          Starry Skies Astrology
+        </h1>
+        <h2
+          className="text-1xl mb-5 
+      md:text-2xl"
+        >
+          Discover Your Cosmic Destiny
+        </h2>
+      </div>
+      <p className="font-[roboto] text-xs mb-20">
+        Unlock the secrets of the stars with personalized astrology readings,
+        birth charts, and compatibility reports.
       </p>
     </div>
   );

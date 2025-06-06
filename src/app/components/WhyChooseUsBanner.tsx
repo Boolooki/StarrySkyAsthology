@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WhyChooseUsBanner() {
   return (
-    <div className="bg-[#1A1A40]">
+    <div className="bg-[#1A1A40] snap-start snap-always">
       <div
         className="text-center text-[#ffd700] font-bold text-4xl pt-[20vw] mb-[5vw]
       lg:text-5xl"
