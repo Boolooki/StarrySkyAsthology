@@ -56,23 +56,27 @@ export default function ServicesBanner() {
         </div>
       </div>
       <div className="bg-[#E6E6FA] flex flex-col">
-        <p className="text-[#1A1A40] w-[30vw] text-center text-base font-bold pt-[10vw] ml-[7vw]
+        <p
+          className="text-[#1A1A40] w-[30vw] text-center text-base font-bold pt-[10vw] ml-[7vw]
         sm:text-xl
         md:text-2xl
         lg:text-4xl
         xl:text-5xl
         2xl:pt-[15vw]
-        ">
+        "
+        >
           “ Over 10 years of experience in astrology ”
         </p>
-        <a href="#book-a-reading" 
-        className="bg-[#ffd700] text-[#1A1A40] text-xs px-2 py-1 rounded-full mt-[3vw] w-[40vw] ml-[3vw] text-center
+        <a
+          href="#book-a-reading"
+          className="bg-[#ffd700] text-[#1A1A40] text-xs px-2 py-1 rounded-full mt-[3vw] w-[40vw] ml-[3vw] text-center
         sm:text-xs
         md:text-base
         lg:text-xl
         xl:text-3xl
         hover:bg-yellow-400 transition-colors duration-200
-        ">
+        "
+        >
           Tailored reading just for you
         </a>
         <div className="relative z-3 items-center justify-center">
@@ -91,4 +95,3 @@ export default function ServicesBanner() {
     </div>
   );
 }
-// This code defines a ServicesBanner component that displays a banner for astrology services.

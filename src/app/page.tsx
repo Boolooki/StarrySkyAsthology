@@ -1,5 +1,6 @@
 import ServicesBanner from "./components/ServicesBanner";
 import StarryBanner from "./components/StarryBanner";
+import WhyChooseUsBanner from "./components/WhyChooseUsBanner";
 
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <StarryBanner />
       <ServicesBanner />
+      <WhyChooseUsBanner />
     </div>
   );
 }
